@@ -1,0 +1,14 @@
+/* -------------reviews------------------ */
+
+.reviews__inner {
+   padding: 100px 0;
+   display: flex;
+   justify-content: space-between;
+   margin: 0 -30px;
+}
+
+@media (max-width: 900px) {
+   .reviews__inner {
+      flex-wrap: wrap;
+   }
+}

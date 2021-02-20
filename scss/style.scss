@@ -1,0 +1,65 @@
+@import "_nullstyle";
+@import "_variables";
+
+::-webkit-scrollbar {
+   width: 12px;
+}
+::-webkit-scrollbar-track {
+   background: #333;
+}
+::-webkit-scrollbar-thumb {
+   background-color: $accent;
+   border-radius: 15px;
+}
+
+html {
+   scroll-behavior: smooth;
+   scrollbar-color: $accent #333;
+   scrollbar-width: auto;
+
+   -ms-scrollbar-base-color: #000;
+   -ms-scrollbar-track-color: #333;
+   -ms-scrollbar-face-color: $accent;
+   -ms-scrollbar-arrow-color: $accent;
+}
+
+body {
+   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+   color: inherit;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+.title {
+   text-align: center;
+   color: $dark;
+   text-transform: uppercase;
+   font-size: 50px;
+   font-weight: 700;
+   margin-bottom: 50px;
+}
+
+// Blocks
+
+@import "blocks/_container.scss";
+@import "blocks/_header.scss";
+@import "blocks/_nav.scss";
+@import "blocks/_burger.scss";
+@import "blocks/_form.scss";
+@import "blocks/_services.scss";
+@import "blocks/_btn.scss";
+@import "blocks/_pricing.scss";
+@import "blocks/_testimonial.scss";
+@import "blocks/_reviews.scss";
+@import "blocks/_galery.scss";
+@import "blocks/_footer.scss";
+
+

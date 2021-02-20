@@ -1,0 +1,91 @@
+/* --------pricing -------------*/
+
+.pricing {
+   background-color: #e3d5b8;
+}
+
+.pricing__inner {
+   padding: 100px 0;
+}
+
+.pricing__items {
+   display: flex;
+   justify-content: space-evenly;
+   margin: 0px -10px;
+}
+
+.pricing__item {
+   display: flex;
+   flex: 0 1 400px;
+   padding: 0px 10px;
+}
+
+.pricing__column {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   background-color: #fff;
+   border-radius: 4px;
+   padding: 35px 50px 20px;
+   text-align: center;
+}
+
+.pricing__subtitle {
+   font-size: 22px;
+   line-height: 28px;
+   margin-bottom: 35px;
+}
+
+.pricing__lable {
+   text-transform: uppercase;
+   margin-bottom: 35px;
+   color: $accent;
+   font-size: 60px;
+   font-weight: 700;
+}
+
+.pricing__list {
+   font-size: 20px;
+   line-height: 28px;
+   margin-bottom: 35px;
+   flex: 1 1;
+}
+
+.pricing__btn {
+   color: #fff;
+   background: $accent;
+}
+
+.pricing__column_label {
+   overflow: hidden;
+   position: relative;
+   &::before {
+      content: "Popular";
+      font-size: 18px;
+      transform: rotate(-45deg);
+      position: absolute;
+      left: -57px;
+      top: -19px;
+      color: #fff;
+      padding: 50px 50px 10px;
+      background: $accent;
+   }
+}
+
+@media (max-width: 1000px) {
+   .pricing__items {
+      flex-wrap: wrap;
+   }
+   .pricing__item {
+      margin-bottom: 50px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+}
+
+@media (max-width: 350px) {
+   .pricing__column {
+      padding: 35px 40px 20px;
+   }
+}

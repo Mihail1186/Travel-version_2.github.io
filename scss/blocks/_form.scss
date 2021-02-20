@@ -1,0 +1,163 @@
+
+
+.form {
+   background-color: rgba($accent, 0.8);
+   border-radius: 4px;
+   padding: 20px;
+}
+
+.form__title {
+   font-size: 20px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.form__content {
+   padding: 20px 0;
+}
+
+.form__item {
+   position: relative;
+   margin-bottom: 20px;
+   .form__label {
+      transition: all 0.2s linear;
+      pointer-events: none;
+      font-size: 16px;
+      color: $dark;
+      position: absolute;
+      left: 1rem;
+      top: 0;
+      transform: translateY(75%);
+   }
+   input {
+      width: 100%;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 16px;
+      height: 40px;
+      &:invalid {
+         box-shadow: none;
+      }
+      &:focus,
+      &:hover {
+         box-shadow: 0px 0px 15px 5px rgba(#000, 0.6);
+      }
+   }
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.form__item input:focus + .form__label,
+.form__item input:valid + .form__label {
+   top: -8px;
+   left: 8px;
+   font-size: 12px;
+   color: red;
+}
+
+.form__select {
+   display: block;
+   height: 40px;
+   color: $dark;
+   appearance: none !important;
+   -ms-appearance: none;
+   -webkit-appearance: none;
+   font-family: inherit;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   font-size: 16px;
+   padding: 10px 35px 10px 10px;
+   border-radius: 4px;
+
+   &:focus,
+   &:hover {
+      box-shadow: 0px 0px 15px 5px rgba(#000, 0.6);
+   }
+   &::-ms-expand {
+      display: none;
+   }
+}
+
+.form__item_arrow {
+   position: relative;
+
+   &::before {
+      content: "";
+      display: block;
+      border-style: solid;
+      border-style: solid;
+      border-width: 10px 7px 0 7px;
+      border-color: $dark transparent transparent transparent;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      pointer-events: none;
+   }
+}
+.form__item_active::before {
+   content: "";
+   border-style: solid;
+   border-width: 0 7px 10px 7px;
+   border-color: transparent transparent $dark transparent;
+}
+
+.form__item .checkinput {
+   vertical-align: text-bottom;
+   display: inline-block;
+   width: 15px;
+   height: 15px;
+   &:focus,
+   &:hover {
+      box-shadow: none;
+   }
+}
+label.form__conditions {
+   font-size: 16px;
+   position: static;
+   margin-left: 10px;
+   box-shadow: none;
+   color: inherit;
+   a {
+      display: inline-block;
+      margin-left: 5px;
+      color: blue;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
+
+.form__bottom {
+   width: 100%;
+   height: 40px;
+}
+
+.form__btn {
+   width: 100%;
+   height: 100%;
+   background: $dark;
+   border-radius: 4px;
+   color: #fff;
+   font-size: 18px;
+   transition: background 0.2s linear;
+   &:hover {
+      background: #000;
+   }
+}
+
+
+@media (max-width: 830px) {
+   .header__form {
+      display: flex;
+      justify-content: center;
+   }
+
+   .form{
+      flex: 0 1 330px;
+   }
+}
