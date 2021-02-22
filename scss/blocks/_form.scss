@@ -19,20 +19,10 @@
 .form__item {
    position: relative;
    margin-bottom: 20px;
-   .form__label {
-      transition: all 0.2s linear;
-      pointer-events: none;
-      font-size: 16px;
-      color: $dark;
-      position: absolute;
-      left: 1rem;
-      top: 0;
-      transform: translateY(75%);
-   }
    input {
       width: 100%;
       border-radius: 4px;
-      padding: 10px;
+      padding: 10px 10px 4px 10px;
       font-size: 16px;
       height: 40px;
       &:invalid {
@@ -48,12 +38,27 @@
       margin-bottom: 0;
    }
 }
+.form__label {
+   pointer-events: none;
+   font-size: 16px;
+   color: $dark;
+
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   max-width: 200px;
+
+   position: absolute;
+   left: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   transform-origin: left top;
+   transition: all 0.2s ease;
+}
 
 .form__item input:focus + .form__label,
 .form__item input:valid + .form__label {
-   top: -8px;
-   left: 8px;
-   font-size: 12px;
+   transform: translateY(-100%) scale(0.7);
    color: red;
 }
 
